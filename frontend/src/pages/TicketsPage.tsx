@@ -16,10 +16,10 @@ export default function TicketPage() {
     }, []);
 
     return (
-        <div className="p-4">
+        <div className="p-4 flex flex-col gap-2">
             {
                 tickets.map((ticket: {id: string; description: string; status: string;}) => (
-                    <Ticket id={ticket.id} description={ticket.description} status={ticket.status} />
+                    <Ticket key={ticket.id} id={ticket.id} description={ticket.description} status={ticket.status} />
                 ))
             }
         </div>
