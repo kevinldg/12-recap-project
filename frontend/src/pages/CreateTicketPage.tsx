@@ -17,7 +17,7 @@ export default function CreateTicketPage() {
         <div className="p-4">
             <form onSubmit={handleSubmit} className="flex flex-col gap-2 w-fit">
                 <input type="text" name="description" placeholder="Description" value={description} onChange={event => setDescription(event.target.value)} className="border-black border px-1" />
-                <button type="submit" className="bg-blue-500 text-white">Create Ticket</button>
+                <button type="submit" className="bg-blue-500 text-white">Create</button>
             </form>
         </div>
     );

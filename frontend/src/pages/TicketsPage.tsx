@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react";
 import axios from "axios";
 import Ticket from "../components/Ticket.tsx";
+import {Link} from "react-router-dom";
 
 export default function TicketPage() {
     const [tickets, setTickets] = useState([]);
@@ -22,6 +23,7 @@ export default function TicketPage() {
                     <Ticket key={ticket.id} id={ticket.id} description={ticket.description} status={ticket.status} />
                 ))
             }
+            <Link to={`/tickets/create`} className="bg-blue-500 text-white w-fit px-2">Create Ticket</Link>
         </div>
     );
 }
